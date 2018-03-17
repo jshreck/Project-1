@@ -59,7 +59,7 @@ function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
       createMarker(results[i]);
-      $("#bar-container").append(`<div id="${results[i].name}"><p>${results[i].name}</p></div>`);
+      $("#bar-quick-view").append(`<div id="${results[i].name} class="barSection"><p class="barName">${results[i].name}</p></div>`);
     }
   }
 }
